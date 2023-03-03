@@ -3,12 +3,7 @@ const btoa = (text: string) => {
 };
 
 const base64 = (password: string, username: string): string => {
-    let addedTime = 0;
-    const offset = (new Date()).getTimezoneOffset();
-    if(offset === 0) {
-        addedTime = 3600000
-    }
-    const date = Math.round((Date.now() + addedTime)/1000);
+    const date = Math.round(Date.now()/1000);
     return btoa(`${password}|${username}|${date.toString()}`);
 }
 
