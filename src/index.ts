@@ -21,8 +21,8 @@ export default class Kadick {
         instance.defaults.headers.common['Accept'] = 'application/json';
         this._axios = instance;
 
-        this.airtime = new AirtimeService(this, base64(this._password, this._username))
-        this.dataBundle = new DataBundleService(this, base64(this._password, this._username))
+        this.airtime = new AirtimeService(this, this._username, this._password)
+        this.dataBundle = new DataBundleService(this, this._username, this._password)
     }
 
     get axios(): AxiosInstance {

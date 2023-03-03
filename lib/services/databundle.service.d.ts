@@ -1,5 +1,5 @@
 import Kadick from "..";
 export default class DataBundleService {
     #private;
-    constructor(kadick: Kadick, key: string);
+    constructor(kadick: Kadick, username: string, password: string);
 }

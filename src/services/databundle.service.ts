@@ -2,10 +2,12 @@ import Kadick from "..";
 
 export default class DataBundleService {
     #kadick: Kadick;
-    #key: string;
+    #username: string;
+    #password: string;
     
-    constructor(kadick: Kadick, key: string) {
+    constructor(kadick: Kadick, username: string, password: string) {
         this.#kadick = kadick;
-        this.#key = key;
+        this.#username = username;
+        this.#password = password;
     }
 }
