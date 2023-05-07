@@ -1,4 +1,4 @@
-export declare type OrderRequest = {
+export type OrderRequest = {
     countryId: number;
     operatorId?: "1" | "2" | "3" | "6";
     operatorCode?: "MTN" | "ATL" | "GLO" | "9M";

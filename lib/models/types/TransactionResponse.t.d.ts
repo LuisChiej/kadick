@@ -1,4 +1,4 @@
-export declare type TransactionResponse = {
+export type TransactionResponse = {
     date: string;
     count: number;
     errorCode: number;
@@ -6,14 +6,14 @@ export declare type TransactionResponse = {
     transactions?: Array<Transaction>;
     allTransactions?: Array<Transaction>;
 };
-export declare type TransactionCountResponse = {
+export type TransactionCountResponse = {
     fromDate: string;
     toDate: string;
     count: number;
     errorCode: string;
     errorDescription: string;
 };
-declare type Transaction = {
+type Transaction = {
     id: number;
     operatorCode: "MTN" | "ATL" | "GLO" | "9M";
     operatorPlanId: string;

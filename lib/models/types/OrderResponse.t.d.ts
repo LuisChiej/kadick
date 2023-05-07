@@ -1,4 +1,4 @@
-export declare type OrderResponse = {
+export type OrderResponse = {
     errorCode: number;
     errorDescription: string;
     signature: number;
