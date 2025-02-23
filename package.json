@@ -2,7 +2,7 @@
   "name": "kadick",
   "version": "1.0.4",
   "description": "API for kadick",
-  "main": "lib/index.js",
+  "main": "index.js",
   "author": "LuisChiej",
   "license": "MIT",
   "scripts": {
