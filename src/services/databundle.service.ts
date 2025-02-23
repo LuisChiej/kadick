@@ -36,7 +36,7 @@ export default class DataBundleService {
         }
     }
 
-    async getDataPlans(request: Pick<OrderRequest, 'key1' | 'signature' | 'operatorId'>): Promise<OrderResponse | null> {
+    async getDataPlans(request: Pick<OrderRequest, 'operatorId'>): Promise<OrderResponse | null> {
         const key = base64(this.#password, this.#username)
         const url = 'oprdataplans'
 
