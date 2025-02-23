@@ -5,5 +5,5 @@ export default class DataBundleService {
     #private;
     constructor(kadick: Kadick, username: string, password: string);
     buy(request: Omit<OrderRequest, 'key1' | 'signature'>): Promise<OrderResponse | null>;
-    getDataPlans(request: Pick<OrderRequest, 'operatorId'>): Promise<OrderResponse | null>;
+    getDataPlans(request: Pick<OrderRequest, 'operatorId' | 'countryId'>): Promise<OrderResponse | null>;
 }
