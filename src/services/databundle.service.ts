@@ -35,4 +35,25 @@ export default class DataBundleService {
             return null;
         }
     }
+
+    async getDataPlans(request: Pick<OrderRequest, 'key1' | 'signature' | 'operatorId'>): Promise<OrderResponse | null> {
+        const key = base64(this.#password, this.#username)
+        const url = 'oprdataplans'
+
+        try {
+            const response = await this.#kadick.axios.post(
+                url, {
+                    ...request,
+                    key1: key,
+                    signature: getSignature()
+                }
+            )
+
+            if(response.status === 200) return response.data;
+            return null;
+        } catch (e) {
+            console.log(e);
+            return null;
+        }
+    }
 }

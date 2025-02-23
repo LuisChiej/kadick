@@ -17,4 +17,14 @@ export type OrderResponse = {
         dateLabel: string;
         transactionType: string;
     };
+    dataPlans?: Array<{
+        operator: string;
+        operatorPlanId: number;
+        planDescription: string;
+        amount: string;
+        dnValue: string;
+        dnCode: string;
+        planUpdatedTime: string;
+        rateUpdateTime: string;
+    }>;
 };

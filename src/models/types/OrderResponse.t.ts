@@ -16,5 +16,15 @@ export type OrderResponse = {
         oprPlan: string;
         dateLabel: string;
         transactionType: string;
-    }
+    },
+    dataPlans?: Array<{
+        operator: string;
+        operatorPlanId: number;
+        planDescription: string;
+        amount: string; // "5000.00"
+        dnValue: string; // "5000.00",
+        dnCode: string;
+        planUpdatedTime: string;
+        rateUpdateTime: string;
+    }>
 }

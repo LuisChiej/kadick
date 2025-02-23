@@ -1,7 +1,6 @@
 import axios, { AxiosInstance } from "axios";
 import AirtimeService from "./services/airtime.service";
 import DataBundleService from "./services/databundle.service";
-import base64 from "./utils/base64";
 
 export default class Kadick {
     private _username: string;
