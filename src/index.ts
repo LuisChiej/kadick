@@ -14,7 +14,8 @@ export default class Kadick {
         this._username = username;
         this._password = password;
         const instance = axios.create({
-            baseURL: 'https://b2b.kadicktopup.com/api'
+            // baseURL: 'https://b2b.kadicktopup.com/api'
+            baseURL: 'https://b2b.kadickeplus.com'
         });
         instance.defaults.headers.post['Content-Type'] = 'application/json';
         instance.defaults.headers.common['Accept'] = 'application/json';
