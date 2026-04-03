@@ -19,6 +19,10 @@ export default class Kadick {
         });
         instance.defaults.headers.post['Content-Type'] = 'application/json';
         instance.defaults.headers.common['Accept'] = 'application/json';
+        instance.interceptors.request.use(request => {
+            console.log('Starting Request', JSON.stringify(request, null, 2))
+            return request
+        })
         this._axios = instance;
 
         this.airtime = new AirtimeService(this, this._username, this._password)
