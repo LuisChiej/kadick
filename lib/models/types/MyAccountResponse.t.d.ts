@@ -7,7 +7,7 @@ type MyResponse = {
 };
 export type MyAccountResponse = MyResponse & {
     username: string;
-    availableCredit: string;
+    avaialbleCredit: string;
     lastTxAmount: string;
     lastTxNo: string;
     lastTxDate: string;
