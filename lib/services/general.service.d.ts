@@ -2,7 +2,7 @@ import Kadick from "..";
 import { MyAccountResponse, MyInfoResponse } from "../models/types/MyAccountResponse.t";
 import { OrderRequest } from "../models/types/OrderRequest.t";
 import { TransactionResponse } from "../models/types/TransactionResponse.t";
-export default class AirtimeService {
+export default class GeneralService {
     #private;
     constructor(kadick: Kadick, username: string, password: string);
     getAccount(request: Pick<OrderRequest, 'countryId' | 'count' | 'date'>): Promise<MyAccountResponse | null>;

@@ -5,7 +5,7 @@ import { TransactionResponse } from "../models/types/TransactionResponse.t";
 import base64 from "../utils/base64";
 import getSignature from "../utils/getSignature";
 
-export default class AirtimeService {
+export default class GeneralService {
     #kadick: Kadick;
     #username: string;
     #password: string;

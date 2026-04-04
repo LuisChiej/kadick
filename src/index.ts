@@ -1,6 +1,7 @@
 import axios, { AxiosInstance } from "axios";
 import AirtimeService from "./services/airtime.service";
 import DataBundleService from "./services/databundle.service";
+import GeneralService from "./services/general.service";
 
 export default class Kadick {
     private _username: string;
@@ -9,6 +10,7 @@ export default class Kadick {
 
     public airtime: AirtimeService;
     public dataBundle: DataBundleService;
+    public general: GeneralService;
 
     constructor(username: string, password: string) {
         this._username = username;
@@ -27,6 +29,7 @@ export default class Kadick {
 
         this.airtime = new AirtimeService(this, this._username, this._password)
         this.dataBundle = new DataBundleService(this, this._username, this._password)
+        this.general = new GeneralService(this, this._username, this._password)
     }
 
     get axios(): AxiosInstance {
