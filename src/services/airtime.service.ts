@@ -17,7 +17,7 @@ export default class AirtimeService {
 
     async buy(request: Omit<OrderRequest, 'key1' | 'signature'>): Promise<OrderResponse | null> {
         const key = base64(this.#password, this.#username)
-        const url = request.operatorCode === '9M' ? '9mflexisale' : 'flexisale'
+        const url = 'flexisale'
 
         try {
             const response = await this.#kadick.axios.post(
